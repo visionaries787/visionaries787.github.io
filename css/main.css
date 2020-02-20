@@ -3125,3 +3125,14 @@ pre .javascript .function {
     margin: 8px 0 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 60% 50%;
+  }
+  #footer a {
+    color: #eee;
+  }
+}
