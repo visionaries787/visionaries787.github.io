@@ -27,10 +27,10 @@
 </ol>
 <h3 id="三、IDEA安装"><a href="#三、IDEA安装" class="headerlink" title="三、IDEA安装"></a>三、IDEA安装</h3><ol>
 <li><p><a href="https://www.jetbrains.com/zh-cn/idea/download/#section=linux" target="_blank" rel="noopener">官网</a>下载linux版本</p>
-<p>  <img src="4.linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK.png" alt=""></p>
+<p>  <img src="/" class="lazyload" data-src="4.linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK.png"  alt=""></p>
 </li>
 <li><p>解压安装包后进入bin目录，执行<code>./ideash</code>命令安装</p>
-<p><img src="5.linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK.png" alt=""></p>
+<p><img src="/" class="lazyload" data-src="5.linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK.png"  alt=""></p>
 </li>
 </ol>
 ]]></content>
