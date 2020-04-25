@@ -1,6 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java高级特性-反射</title>
+    <url>/2020/04/25/Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%8F%8D%E5%B0%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>定义：JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意方法和属性；这种动态获取信息及动态调用对象方法的功能称为java的反射机制。</p>
+<p>java反射的实现主要借助一下四个类，也就是经过类加载器(ClassLoader)后形成的对象</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Class类</td>
+<td>类的实体，在运行的java应用程序中表示类和接口</td>
+</tr>
+<tr>
+<td>Field类</td>
+<td>类的成员变量</td>
+</tr>
+<tr>
+<td>Method类</td>
+<td>类的成员方法</td>
+</tr>
+<tr>
+<td>Constructor类</td>
+<td>类的构造方法</td>
+</tr>
+</tbody></table>
+<p><strong>好处：</strong></p>
+<blockquote>
+<ul>
+<li>可以在程序运行过程中，操作这写对象；只要给定类名，就可以通过反射机制来获取类的所有信息</li>
+<li>可以解耦，提高程序的可扩展性</li>
+</ul>
+</blockquote>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h4><p><strong>1.获取Class对象的方式</strong></p>
+<blockquote>
+<ul>
+<li><p>Class.forName(“全类名”)：将字节码文件加载进内存，返回Class对象</p>
+<p><em>–多用于配置文件，将类名定义在配置文件中。读取文件，加载类</em></p>
+</li>
+<li><p>类名.class：通过类名的属性class获取</p>
+<p>–<em>多用于参数的传递</em></p>
+</li>
+<li><p>对象.getClass()：Object类中的方法</p>
+<p><em>–多用于对象获取字节码的方式</em></p>
+</li>
+</ul>
+</blockquote>
+<p>注：同一个字节码文件(*.class)在一次程序运行过程中，只会被加载一次，下列三种方式获取的Class对象都是同一个。</p>
+<p><strong>2.Class对象方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>获取类相关方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>asSubclass(Class<U> clazz)</td>
+<td>把指定类的对象转换成代表其子类的对象</td>
+</tr>
+<tr>
+<td>Cast</td>
+<td>把对象转换成代表类或是接口的对象</td>
+</tr>
+<tr>
+<td>getClassLoader()</td>
+<td>获得类加载器</td>
+</tr>
+<tr>
+<td>getClasses()</td>
+<td>返回一个数组。数组中包含改类中所有公共类和接口类的对象</td>
+</tr>
+<tr>
+<td>getDeclaredClasses()</td>
+<td>返回一个数组，数组中包含该类中所有类和接口类的对象</td>
+</tr>
+<tr>
+<td>forName(String className)</td>
+<td>根据类名返回类的对象</td>
+</tr>
+<tr>
+<td>getName()</td>
+<td>获得类的完整路径名字</td>
+</tr>
+<tr>
+<td>newInstance()</td>
+<td>创建类的实例</td>
+</tr>
+<tr>
+<td>getPackage()</td>
+<td>获得类的包</td>
+</tr>
+<tr>
+<td>getSimpleName()</td>
+<td>获得类的名字</td>
+</tr>
+<tr>
+<td>getSuperclass()</td>
+<td>获得当前类继承的父类的名字</td>
+</tr>
+<tr>
+<td>getInterfaces()</td>
+<td>获得当前类实现的类或是接口</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>获取类中属性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getField(String name)</td>
+<td>获得某个公有的属性对象</td>
+</tr>
+<tr>
+<td>getFields()</td>
+<td>获得所有公有的属性对象</td>
+</tr>
+<tr>
+<td>getDeclaredField(String name)</td>
+<td>获得某个属性对象</td>
+</tr>
+<tr>
+<td>getDeclaredFields()</td>
+<td>获得所有属性对象</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>获取类中构造方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getConstructor(Class…&lt;?&gt; parameterTypes)</td>
+<td>获得该类中与参数类型匹配的公有构造方法</td>
+</tr>
+<tr>
+<td>getConstructors()</td>
+<td>获得该类的所有公有构造方法</td>
+</tr>
+<tr>
+<td>getDeclaredConstructor(Class…&lt;?&gt; parameterTypes)</td>
+<td>获得该类中与参数类型匹配的构造方法</td>
+</tr>
+<tr>
+<td>getDeclaredConstructors()</td>
+<td>获得该类所有构造方法</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>获取类中成员方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getMethod(String name, Class…&lt;?&gt; parameterTypes)</td>
+<td>获得该类某个公有的方法</td>
+</tr>
+<tr>
+<td>getMethods()</td>
+<td>获得该类所有公有的方法</td>
+</tr>
+<tr>
+<td>getDeclaredMethod(String name, Class…&lt;?&gt; parameterTypes)</td>
+<td>获得该类某个方法</td>
+</tr>
+<tr>
+<td>getDeclaredMethods()</td>
+<td>获得该类所有方法</td>
+</tr>
+</tbody></table>
+<h4 id="Field类"><a href="#Field类" class="headerlink" title="Field类"></a>Field类</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>equals(Object obj)</td>
+<td>属性与obj相等则返回true</td>
+</tr>
+<tr>
+<td>get(Object obj)</td>
+<td>获得obj中对应的属性值</td>
+</tr>
+<tr>
+<td>set(Object obj, Object value)</td>
+<td>设置obj中对应属性值</td>
+</tr>
+</tbody></table>
+<h4 id="Method类"><a href="#Method类" class="headerlink" title="Method类"></a>Method类</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>invoke(Object obj, Object… args)</td>
+<td>传递object对象及参数调用该对象对应的方法</td>
+</tr>
+</tbody></table>
+<h4 id="Constructor类"><a href="#Constructor类" class="headerlink" title="Constructor类"></a>Constructor类</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>newInstance(Object… initargs)</td>
+<td>根据传递的参数创建类的对象</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux中安装JDK和IDEA</title>
     <url>/2020/04/11/Linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h3><ul>
