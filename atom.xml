@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://github.com/visionaries787/"/>
+  <link href="https://github.com/visionaries787.github.io/"/>
   <updated>2020-04-25T10:15:35.345Z</updated>
-  <id>https://github.com/visionaries787/</id>
+  <id>https://github.com/visionaries787.github.io/</id>
   
   <author>
     <name>S*FWWIL</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Java高级特性-反射</title>
-    <link href="https://github.com/visionaries787/2020/04/25/Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%8F%8D%E5%B0%84/"/>
-    <id>https://github.com/visionaries787/2020/04/25/Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%8F%8D%E5%B0%84/</id>
+    <link href="https://github.com/visionaries787.github.io/2020/04/25/Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%8F%8D%E5%B0%84/"/>
+    <id>https://github.com/visionaries787.github.io/2020/04/25/Java%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7-%E5%8F%8D%E5%B0%84/</id>
     <published>2020-04-25T10:03:52.000Z</published>
     <updated>2020-04-25T10:15:35.345Z</updated>
     
@@ -35,17 +35,17 @@
     </summary>
     
     
-      <category term="java" scheme="https://github.com/visionaries787/categories/java/"/>
+      <category term="java" scheme="https://github.com/visionaries787.github.io/categories/java/"/>
     
     
-      <category term="java" scheme="https://github.com/visionaries787/tags/java/"/>
+      <category term="java" scheme="https://github.com/visionaries787.github.io/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>Linux中安装JDK和IDEA</title>
-    <link href="https://github.com/visionaries787/2020/04/11/Linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK/"/>
-    <id>https://github.com/visionaries787/2020/04/11/Linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK/</id>
+    <link href="https://github.com/visionaries787.github.io/2020/04/11/Linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK/"/>
+    <id>https://github.com/visionaries787.github.io/2020/04/11/Linux%E4%B8%AD%E5%AE%89%E8%A3%85JDK/</id>
     <published>2020-04-11T13:58:35.000Z</published>
     <updated>2020-04-18T07:34:14.670Z</updated>
     
@@ -61,21 +61,21 @@
     </summary>
     
     
-      <category term="linux" scheme="https://github.com/visionaries787/categories/linux/"/>
+      <category term="linux" scheme="https://github.com/visionaries787.github.io/categories/linux/"/>
     
     
-      <category term="java" scheme="https://github.com/visionaries787/tags/java/"/>
+      <category term="java" scheme="https://github.com/visionaries787.github.io/tags/java/"/>
     
-      <category term="linux" scheme="https://github.com/visionaries787/tags/linux/"/>
+      <category term="linux" scheme="https://github.com/visionaries787.github.io/tags/linux/"/>
     
-      <category term="环境" scheme="https://github.com/visionaries787/tags/%E7%8E%AF%E5%A2%83/"/>
+      <category term="环境" scheme="https://github.com/visionaries787.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/visionaries787/2020/02/18/hello-world/"/>
-    <id>https://github.com/visionaries787/2020/02/18/hello-world/</id>
+    <link href="https://github.com/visionaries787.github.io/2020/02/18/hello-world/"/>
+    <id>https://github.com/visionaries787.github.io/2020/02/18/hello-world/</id>
     <published>2020-02-18T12:09:34.619Z</published>
     <updated>2020-04-18T07:19:18.247Z</updated>
     
